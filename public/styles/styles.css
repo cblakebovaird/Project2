@@ -1,3 +1,23 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+#home {
+  font-family: 'Merriweather', serif; 
+}
+
+#loginBtn {
+  margin-left: 10px;
+}
+
+#indexJumbotron {
+  text-align: center;
+  margin-top: 9.5%;
+  background-color: none;
+  opacity: 1;
+  color: white;
+}
+
+body {
+  background-image: url("https://wallpaperplay.com/walls/full/5/a/8/156627.jpg#.XYmzy6eZHPc.link");
+}
