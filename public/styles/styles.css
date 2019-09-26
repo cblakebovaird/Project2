@@ -34,15 +34,15 @@ body {
    margin-left: 160px;
  } */
 
- .jumbotron {
+ .loginContainer {
    background : transparent;
    color : blue;
   
  }
 
- .form-control {
-   /* width : 40%; */
- }
+ /* .form-control {
+    width : 40%; 
+ } */
 
  #newprofile {
   margin-left: 20px;
