@@ -27,7 +27,7 @@
         }
 
         .navbar {
-            background-color: black;
+            background-image: url("https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/how-to-plan-a-programming-competition-header@2x.png");
             color: white;
         }
 
@@ -35,7 +35,7 @@
             margin: 0 auto;
         }
 
-        .container {
+        #sideBar {
             margin: 0;
             float: right;
         }
@@ -54,7 +54,7 @@
         }
 
         .btn:hover {
-            background-color: white;
+            background-color: lightblue;
             color: black;
             text-decoration: none;
         }
@@ -70,21 +70,34 @@
             border-width: 1px;
         }
 
-        body{
+        .card-heading {
+            background-image: url("https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/how-to-plan-a-programming-competition-header@2x.png");
+            margin-bottom: 20px;
+        }
+
+        body {
             background-color: black;
         }
-        .post{
+
+        .post {
             background-color: black;
             color: white;
-            margin-bottom: 5px;
+            margin: 0 auto;
             border-style: solid;
             border-color: lightblue;
             border-width: 1px;
+            width: 65%;
         }
+
+        .top-posts {
+            width: 100%;
+        }
+
         .dropdown-item {
             color: white;
         }
-        .btn-outline-success{
+
+        .btn-outline-success {
             border-color: lightblue;
         }
 
@@ -92,71 +105,68 @@
             margin-top: 40px;
         }
 
-        .contents {
+        .trending {
             height: 100vh;
-            width: 100%;
-            border-color: gray;
-            border-style: solid;
-            border-left-width: 3px;
-            border-right-width: 3px;
-            border-top-width: 0;
-            border-bottom-width: 0;
+            margin: 0 auto;
             margin-top: 40px;
-        
         }
 
-        .nav-link{
-            color:lightblue;
-        }
-        .nav-link:hover{
+        .nav-link {
             color: white;
         }
-        .navbar-brand{
-            color:white;
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .navbar-brand {
+            color: white;
             font-size: 35px;
         }
-        .navbar-brand:hover{
-            color:lightblue;
+
+        .navbar-brand:hover {
+            color: lightblue;
         }
-        
     </style>
 
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Scrypting</a>
+    <div class="container-fluid" id="navContainer">
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Scrypting</a>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
 
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
 
-    <div class="jumboContainer">
+    <div class="container-fluid jumboContainer">
         <div class="jumbotron jumbotron-fluid">
             <h1 class="display-4"><strong></strong></h1>
-            
+
         </div>
     </div>
 
-    <div class="container col-2" id="sideBar">
-        <div class="container links">
+    <div class="container-fluid col-2" id="sideBar">
+        <div class="container-fluid links">
             <div class="accordion" id="accordionExample">
                 <div class="card">
                     <div class="card-header" id="headingOne">
@@ -365,11 +375,20 @@
     </div>
     <!--end link container-->
 
-    <div class="container contents">
-        <div class="card post">
-            This is where top trending posts should append
+    <!--Begin Trending container-->
+    <div class="container-fluid trending">
+        <div class="card card-heading">
+            <h1>Top Trending Posts</h1>
+        </div>
+        <div class="container-fluid top-posts">
+            <div class="card post">
+                This is where top trending posts should append
+            </div>
         </div>
     </div>
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
