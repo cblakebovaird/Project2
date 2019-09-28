@@ -7,6 +7,9 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  app.get("/landing", function(req, res) {
+    res.render("landing");
+  });
   app.get("/newuser", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/newprofile.html"));
   });
