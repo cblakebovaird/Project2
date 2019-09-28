@@ -1,16 +1,9 @@
-var Sequelize = require("sequelize");
-// sequelize (lowercase)
-var sequelize = require("../config/connection.js");
-
-// Post Model
-var Post = sequelize.define("post", {
-  title: Sequelize.STRING,
-  body: Sequelize.STRING,
-  createdAt: Sequelize.DATE
-});
-
-// Syncs with DB
-Post.sync();
-
 //Exports Post Model
-module.exports = Post;
+module.exports = function(sequelize, DataTypes) {
+  var Post = sequelize.define("Post", {
+    title: DataTypes.STRING,
+    body: DataTypes.STRING,
+    createdAt: DataTypes.DATE
+  });
+  return Post;
+};

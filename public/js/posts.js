@@ -42,10 +42,10 @@ $("#postSubmit").on("click", function(event) {
 $.get("/api/all", function(data) {
   if (data.length !== 0) {
     for (var i = 0; i < data.length; i++) {
-      var row = $("<div>");
+      var row = $("<div class='postDivs'>");
       row.addClass("post");
 
-      row.append("<p>" + data[i].title + " posted.. </p>");
+      row.append("<p>" + data[i].title + "<hr>");
       row.append("<p>" + data[i].body + "</p>");
       row.append(
         "<p>At " + moment(data[i].createdAt).format("h:mma on dddd") + "</p>"
