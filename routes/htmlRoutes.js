@@ -25,6 +25,9 @@ module.exports = function(app) {
       });
     });
   });
+  app.get("/postTest", function(req, res) {
+    res.render("postTesting");
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

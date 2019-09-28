@@ -1,5 +1,5 @@
 var db = require("../models");
-var Post = require("../models/testPost.js");
+// var Post = require("../models/testPost.js");
 
 module.exports = function(app) {
   // Get all users
@@ -25,10 +25,12 @@ module.exports = function(app) {
     });
   });
 
+  //-------------Posting routes-------------------
+
   // Get all Posts
   app.get("/api/all", function(req, res) {
     // finds all post then returns them as JSON
-    Post.findAll({}).then(function(results) {
+    db.Post.findAll({}).then(function(results) {
       // results are available to us inside the .then
       res.json(results);
     });
@@ -39,7 +41,7 @@ module.exports = function(app) {
     console.log("Post Data:");
     console.log(req.body);
 
-    Post.create({
+    db.Post.create({
       title: req.body.title,
       body: req.body.body,
       createdAt: req.body.createdAt
