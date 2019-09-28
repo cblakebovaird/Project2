@@ -3,8 +3,8 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
 
 // Post Model
-var Post = sequelize.define("chirp", {
-  user: Sequelize.STRING,
+var Post = sequelize.define("post", {
+  title: Sequelize.STRING,
   body: Sequelize.STRING,
   createdAt: Sequelize.DATE
 });
