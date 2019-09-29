@@ -1,31 +1,50 @@
-// when user clicks add-btn
+// // when user clicks add-btn
 $("#create-profile").on("click", function(event) {
+  console.log("connected");
   event.preventDefault();
 
   // make a newUser obj
   var newUser = {
     // name from name input
-    username: $("#username-text").val().trim(),
+    username: $("#username-text").val(),
     // password from password input
-    password: $("#password").val().trim(),
-    firstName: $("#firstName").val().trim(),
+    password: $("#password").val(),
+    firstName: $("#firstName").val(),
     // age from age input
-    age: $("#age").val().trim(),
+    age: $("#age").val(),
     // city from city input
-    city: $("city").val().trim(),
+    city: $("city").val(),
     // state from state input
-    state: $("#state").val().trim(),
+    state: $("#state").val(),
     // zip from zip input
-    zip: $("#zip").val().trim()
+    zip: $("#zip").val(),
+    // html value
+    html: $("#html").val(),
+    // css value
+    css: $("#css").val(),
+    // node value
+    node: $("#node").val(),
+    // python value
+    python: $("#python").val(),
+    // react value
+    react: $("#react").val(),
+    // javascript value
+    javascript: $("#javascript").val(),
+    // sql value
+    sql: $("#sql").val(),
+    // php value
+    php: $("#php").val(),
+    // ruby value
+    ruby: $("#ruby").val(),
+    // experience value
+    experience: $("experience").val()
   };
-  console.log(newUser);
+
+  // console.log(newUser);
   // send an AJAX POST-request with jQuery
-  $.post("/api/newusers", newUser)
-    // on success, run this callback
-    .then(function(data) {
-      // log the data we found
-      console.log(data);
-      // tell the user we're adding a character with an alert window
-      alert("Adding user...");
-    });
+  $.post("/api/new", newUser)
+  
+  .then(function() {
+  
+  });
 });

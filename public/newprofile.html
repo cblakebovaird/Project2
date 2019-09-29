@@ -5,14 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>New Profile</title>
+
+ <!-- link to jquery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
   <!-- Link to Bootstrap CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+
 <!-- Link to External -->
-  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <!-- <link rel="stylesheet" type="text/css" href="styles/styles.css"> -->
 
   <style>
     body{
@@ -37,7 +48,7 @@
               </div>
               <hr>
     <h3>General Info</h3> 
-    <form class="needs-validation" novalidate>
+    <form class="needs-validation" validate>
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="validationCustom01">First name</label>
@@ -99,28 +110,28 @@
       <div class="col-md-2">
     
               <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="html" value="option1">
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="html" value="html">
       <label class="form-check-label" for="exampleRadios1">
         Html
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="css" value="option2">
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="css" value="css">
       <label class="form-check-label" for="exampleRadios2">
         CSS
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="node" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="node" value="node" >
       <label class="form-check-label" for="exampleRadios3">
         Node.js
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="python" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="python" value="python" >
       <label class="form-check-label" for="exampleRadios3">
         Python
       </label>
@@ -129,28 +140,28 @@
     </div>
     <div class="col-md-2">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="react" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="react" value="react" >
       <label class="form-check-label" for="exampleRadios3">
         React
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="javascript" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="javascript" value="javascript" >
       <label class="form-check-label" for="exampleRadios3">
         Javascript
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="sql" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="sql" value="sql" >
       <label class="form-check-label" for="exampleRadios3">
         SQL
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="php" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="php" value="php" >
       <label class="form-check-label" for="exampleRadios3">
         PHP
       </label>
@@ -159,28 +170,28 @@
     </div>
     <div class="col-md-2">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="ruby" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="ruby" value="ruby" >
       <label class="form-check-label" for="exampleRadios3">
         Ruby
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="java" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="java" value="java" >
       <label class="form-check-label" for="exampleRadios3">
         Java
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="c" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="c" value="c" >
       <label class="form-check-label" for="exampleRadios3">
         C
       </label>
     </div>
     <br>
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" name="exampleRadios" id="cplus" value="option3" >
+      <input class="form-check-input" type="checkbox" name="exampleRadios" id="cplus" value="cplus" >
       <label class="form-check-label" for="exampleRadios3">
         C++
       </label>
@@ -230,12 +241,13 @@
                   }, false);
                 })();
                 </script>   
-                <!-- link to jquery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
+               
 
 <!-- link to external javascript -->
-                <script type="text/javascript" href="../public/js/add.js"></script>
-                <script type="text/javascript" href="../public/js/index.js"></script>
+
+
+                <script type="text/javascript" src="../public/js/add.js"></script>
+                <!-- <script type="text/javascript" href="../public/js/index.js"></script> -->
 
 </body>
 </html>

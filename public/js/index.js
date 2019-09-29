@@ -1,3 +1,5 @@
+console.log("connected");
+
 // Get references to page elements
 var $usernameText = $("#username-text");
 var $passwordText = $("#password-text");

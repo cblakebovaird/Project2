@@ -1,4 +1,4 @@
-var db = require("../models");
+var db = require("../models/newUser");
 
 module.exports = function(app) {
   // Get all users
@@ -10,7 +10,10 @@ module.exports = function(app) {
 
   // Create a new user
   app.post("/api/newuser", function(req, res) {
+    console.log("New User Data:");
     console.log(req.body);
+
+    var dbQuery = "INSERT INTO "
 
     db.newUser.create(newUser).then(function(dbNewUser) {
       res.json(dbNewUser);
