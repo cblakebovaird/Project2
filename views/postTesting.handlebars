@@ -1,0 +1,44 @@
+<div class="jumbotron">
+       <h1 class="text-center">Tinder for Coders</h1>
+   </div>
+   <button id="modalTest" class="btn btn-lg pull-right" data-toggle="modal" data-target="#testModal">Test Button for
+       the modal</button>
+   <div class="modal" tabindex="-1" role="dialog" id="testModal">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 class="modal-title">Post Modal</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-sm-8 col-sm-offset-2">
+                               <p class="cool-font">Title</p>
+                               <input class="form-control" type="text" id="title" placeholder="Enter title">
+                               <br>
+                               <p class="cool-font">Post</p>
+                               <textarea class="form-control" rows="3" id="postBox"
+                                   placeholder="Enter Post Here!"></textarea><br>
+                           </div>
+                       </div><br>
+                   </div>
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   <button type="button" class="btn btn-primary" id="postSubmit">Submit</button>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div class="row" id="postAreaDiv">
+       <div class="col-sm-8 col-sm-offset-2">
+           <h2>Posts</h2>
+           <hr>
+           <div id="postArea"></div>
+       </div>
+   </div>
+
+   <script type="text/javascript" src="/js/posts.js"></script>
