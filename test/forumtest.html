@@ -59,6 +59,7 @@
             text-decoration: none;
         }
 
+
         .card {
             padding: 0;
             text-align: center;
@@ -153,11 +154,40 @@
             left: 50%;
         }
 
+        .upVote {
+            position: absolute;
+            bottom: 0;
+            right: 13%;
+        }
+        .upVote:hover{
+            background-color: black;
+        }
+        .upVoteCounter{
+            position: absolute;
+            bottom: 0;
+            right: 12%;
+        }
+
+        .downVote {
+            position: absolute;
+            bottom: 0;
+            right: 4%;
+        }
+        .downVote:hover{
+            background-color: black;
+        }
+        .downVoteCounter{
+            position: absolute;
+            bottom: 0;
+            right: 3%;
+        }
+
         .previousPage,
         .previousPage:hover {
             float: left;
             position: absolute;
-            left: 0;
+            left: 4%;
+            top: 25%;
             color: white;
         }
 
@@ -165,7 +195,8 @@
         .nextPage:hover {
             float: right;
             position: absolute;
-            right: 0;
+            right: 4%;
+            top: 25%;
             color: white;
         }
     </style>
@@ -179,12 +210,12 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">Scrypting</a>
+            <a class="navbar-brand" href="/">Scrypting</a>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Account</a>
@@ -203,7 +234,7 @@
 
     <div class="container-fluid jumboContainer">
         <div class="jumbotron jumbotron-fluid">
-            <h1 class="display-4"><strong>HTML:GENERAL DISCUSSION</strong></h1>
+            <h1 class="display-4 heading"><strong>{{this.forum-page}}}</strong></h1>
 
         </div>
     </div>
@@ -214,19 +245,19 @@
                 <div class="card">
                     <div class="card-header" id="headingOne">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" id="html" type="button" data-toggle="collapse"
+                            <button class="btn btn-link" id="php" type="button" data-toggle="collapse"
                                 data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                HTML
+                                PHP
                             </button>
                         </h2>
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="htmlGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="htmlHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="htmlBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="htmlEvents">Events</a>
+                                <a class="dropdown-item" href="/php/general" id="phpGeneral">General</a>
+                                <a class="dropdown-item" href="/php/help" id="phpHelp">Help!</a>
+                                <a class="dropdown-item" href="/php/bounties" id="phpBounties">Bounties</a>
+                                <a class="dropdown-item" href="/php/events" id="phpEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -245,10 +276,10 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="cssGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="cssHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="cssBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="cssEvents">Events</a>
+                                <a class="dropdown-item" href="/css/general" id="cssGeneral">General</a>
+                                <a class="dropdown-item" href="/css/help" id="cssHelp">Help!</a>
+                                <a class="dropdown-item" href="/css/bounties" id="cssBounties">Bounties</a>
+                                <a class="dropdown-item" href="/css/events" id="cssEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -268,10 +299,10 @@
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="javascriptGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="javascriptHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="javascriptBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="javascriptEvents">Events</a>
+                                <a class="dropdown-item" href="/javascript/general" id="javascriptGeneral">General</a>
+                                <a class="dropdown-item" href="/javascript/help" id="javascriptHelp">Help!</a>
+                                <a class="dropdown-item" href="/javascript/bounties" id="javascriptBounties">Bounties</a>
+                                <a class="dropdown-item" href="/javascript/events" id="javascriptEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -291,10 +322,10 @@
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="mysqlGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="mysqlHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="mysqlBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="mysqlEvents">Events</a>
+                                <a class="dropdown-item" href="/mysql/general" id="mysqlGeneral">General</a>
+                                <a class="dropdown-item" href="/mysql/help" id="mysqlHelp">Help!</a>
+                                <a class="dropdown-item" href="/mysql/bounties" id="mysqlBounties">Bounties</a>
+                                <a class="dropdown-item" href="/mysql/events" id="mysqlEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -314,10 +345,10 @@
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="pythonGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="pythonHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="pythonBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="pythonEvents">Events</a>
+                                <a class="dropdown-item" href="/python/general" id="pythonGeneral">General</a>
+                                <a class="dropdown-item" href="/python/help" id="pythonHelp">Help!</a>
+                                <a class="dropdown-item" href="/python/bounties" id="pythonBounties">Bounties</a>
+                                <a class="dropdown-item" href="/python/events" id="pythonEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -336,10 +367,10 @@
                     <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="rubyGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="rubyHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="rubyBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="rubyEvents">Events</a>
+                                <a class="dropdown-item" href="/ruby/general" id="rubyGeneral">General</a>
+                                <a class="dropdown-item" href="/ruby/help" id="rubyHelp">Help!</a>
+                                <a class="dropdown-item" href="/ruby/bounties" id="rubyBounties">Bounties</a>
+                                <a class="dropdown-item" href="/ruby/events" id="rubyEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -359,10 +390,10 @@
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="javaGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="javaHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="javaBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="javaEvents">Events</a>
+                                <a class="dropdown-item" href="/java/general" id="javaGeneral">General</a>
+                                <a class="dropdown-item" href="/java/help" id="javaHelp">Help!</a>
+                                <a class="dropdown-item" href="/java/bounties" id="javaBounties">Bounties</a>
+                                <a class="dropdown-item" href="/java/events" id="javaEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -372,7 +403,7 @@
                 <div class="card">
                     <div class="card-header" id="headingEight">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" id="cx2" type="button" data-toggle="collapse"
+                            <button class="btn btn-link" id="cpp" type="button" data-toggle="collapse"
                                 data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
                                 C++
                             </button>
@@ -382,10 +413,10 @@
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="cx2General">General</a>
-                                <a class="dropdown-item" href="#" id="cx2Help">Help!</a>
-                                <a class="dropdown-item" href="#" id="cx2Bounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="cx2Events">Events</a>
+                                <a class="dropdown-item" href="/cpp/general" id="cppGeneral">General</a>
+                                <a class="dropdown-item" href="/cpp/help" id="cppHelp">Help!</a>
+                                <a class="dropdown-item" href="/cpp/bounties" id="cppBounties">Bounties</a>
+                                <a class="dropdown-item" href="/cpp/events" id="cppEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -405,10 +436,10 @@
                         data-parent="#accordionExample">
                         <div class="card-body">
                             <div>
-                                <a class="dropdown-item" href="#" id="cSharpGeneral">General</a>
-                                <a class="dropdown-item" href="#" id="cSharpHelp">Help!</a>
-                                <a class="dropdown-item" href="#" id="cSharpBounties">Bounties</a>
-                                <a class="dropdown-item" href="#" id="cSharpEvents">Events</a>
+                                <a class="dropdown-item" href="/csharp/bounties" id="cSharpGeneral">General</a>
+                                <a class="dropdown-item" href="/csharp/help" id="cSharpHelp">Help!</a>
+                                <a class="dropdown-item" href="/csharp/bounties" id="cSharpBounties">Bounties</a>
+                                <a class="dropdown-item" href="/csharp/events" id="cSharpEvents">Events</a>
                             </div>
                         </div>
                     </div>
@@ -443,6 +474,12 @@
                         blandit enim porttitor eu.</p>
                 </div>
                 <a class="comments" href="#"> 5 comments </a>
+                <input type="image" style="width:4rem;" src="C:\Users\Jarro\UCFBootcamp\Homework\project2\public\images\ThumbsUp.png" class="btn upVote" data-toggle="button" aria-pressed="false"
+                autocomplete="off" />
+                <p class="upVoteCounter">1</p>
+                <input type="image" style="width:4rem;" src="C:\Users\Jarro\UCFBootcamp\Homework\project2\public\images\ThumbsDown.png" class="btn downVote" data-toggle="button" aria-pressed="false"
+                autocomplete="off" />
+                <p class="downVoteCounter">1</p>
             </div>
         </div>
     </div>

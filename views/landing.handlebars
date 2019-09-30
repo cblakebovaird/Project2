@@ -11,10 +11,309 @@
 </head>
 
 <body>
+    <!--begin navbar container-->
+    <div class="container-fluid" id="navContainer">
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--links home-->
+            <a class="navbar-brand" href="/">Scrypting</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <!--links home-->
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <!--links to user account-->
+                        <a class="nav-link" href="#">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <!--links to inbox (iceboxfeature)-->
+                        <a class="nav-link" href="#">Inbox</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!--end navbar container-->
+
+    <!--Begin jumbotron container-->
+    <div class="container-fluid jumboContainer">
+        <div class="jumbotron jumbotron-fluid">
+            <!--display whichever page the user is on in the header.-->
+            <h1 class="display-4"><strong>{{this.pagename}}</strong></h1>
+
+        </div>
+    </div>
+    <!--end jumbotron container-->
+
+    <!--Begin Links on right side container-->
+    <div class="container-fluid col-2" id="sideBar">
+        <div class="container-fluid links">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" id="php" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                PHP
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div>
+                                <!--routes for PHP-->
+                                <a class="dropdown-item" href="/php/general" id="phpGeneral">General</a>
+                                <a class="dropdown-item" href="/php/help" id="phpHelp">Help!</a>
+                                <a class="dropdown-item" href="/php/bounties" id="phpBounties">Bounties</a>
+                                <a class="dropdown-item" href="/php/events" id="phpEvents">Events</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/js/index.js"></script>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" id="css" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                CSS
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div>   
+                                <!--routes for css-->
+                                <a class="dropdown-item" href="/css/general" id="cssGeneral">General</a>
+                                <a class="dropdown-item" href="/css/help" id="cssHelp">Help!</a>
+                                <a class="dropdown-item" href="/css/bounties" id="cssBounties">Bounties</a>
+                                <a class="dropdown-item" href="/css/events" id="cssEvents">Events</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" id="javascript" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                JAVASCRIPT
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div>
+                                <!--routes for JAVASCRIPT-->
+                                <a class="dropdown-item" href="/javascript/general" id="javascriptGeneral">General</a>
+                                <a class="dropdown-item" href="/javascript/help" id="javascriptHelp">Help!</a>
+                                <a class="dropdown-item" href="/javascript/bounties"
+                                    id="javascriptBounties">Bounties</a>
+                                <a class="dropdown-item" href="/javascript/events" id="javascriptEvents">Events</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" id="sql" type="button" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    SQL
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>
+                                    <!--routes for SQL-->
+                                    <a class="dropdown-item" href="/sql/general" id="sqlGeneral">General</a>
+                                    <a class="dropdown-item" href="/sql/help" id="sqlHelp">Help!</a>
+                                    <a class="dropdown-item" href="/sql/bounties" id="sqlBounties">Bounties</a>
+                                    <a class="dropdown-item" href="/sql/events" id="sqlEvents">Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" id="python" type="button" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    PYTHON
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>
+                                    <!--routes for PYTHON-->
+                                    <a class="dropdown-item" href="/python/general" id="pythonGeneral">General</a>
+                                    <a class="dropdown-item" href="/python/help" id="pythonHelp">Help!</a>
+                                    <a class="dropdown-item" href="/python/bounties" id="pythonBounties">Bounties</a>
+                                    <a class="dropdown-item" href="/python/events" id="pythonEvents">Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" id="ruby" type="button" data-toggle="collapse"
+                                    data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                    RUBY
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>
+                                    <!--routes for RUBY-->
+                                    <a class="dropdown-item" href="/ruby/general" id="rubyGeneral">General</a>
+                                    <a class="dropdown-item" href="/ruby/help" id="rubyHelp">Help!</a>
+                                    <a class="dropdown-item" href="/ruby/bounties" id="rubyBounties">Bounties</a>
+                                    <a class="dropdown-item" href="/ruby/events" id="rubyEvents">Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingSeven">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" id="java" type="button" data-toggle="collapse"
+                                    data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    JAVA
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>
+                                    <!--routes for JAVA-->
+                                    <a class="dropdown-item" href="/java/general" id="javaGeneral">General</a>
+                                    <a class="dropdown-item" href="/java/help" id="javaHelp">Help!</a>
+                                    <a class="dropdown-item" href="/java/bounties" id="javaBounties">Bounties</a>
+                                    <a class="dropdown-item" href="/java/events" id="javaEvents">Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingEight">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" id="cpp" type="button" data-toggle="collapse"
+                                    data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                    C++
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>
+                                    <!--routes for C++-->
+                                    <a class="dropdown-item" href="/cpp/general" id="cppGeneral">General</a>
+                                    <a class="dropdown-item" href="/cpp/help" id="cppHelp">Help!</a>
+                                    <a class="dropdown-item" href="/cpp/bounties" id="cppBounties">Bounties</a>
+                                    <a class="dropdown-item" href="/cpp/events" id="cppEvents">Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingNine">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" id="cSharp" type="button" data-toggle="collapse"
+                                    data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                    C#
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div>
+                                    <!--routes for C#-->
+                                    <a class="dropdown-item" href="/csharp/bounties" id="cSharpGeneral">General</a>
+                                    <a class="dropdown-item" href="/csharp/help" id="cSharpHelp">Help!</a>
+                                    <a class="dropdown-item" href="/csharp/bounties" id="cSharpBounties">Bounties</a>
+                                    <a class="dropdown-item" href="/csharp/events" id="cSharpEvents">Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end link container-->
+
+            <!--Begin Trending container-->
+            <div class="container-fluid trending">
+                <div class="card card-heading">
+                    <!--routes for previous page (icebox feature)-->
+                    <a class="previousPage" href="#">Previous Page</a>
+                    <h1>Top Trending Posts</h1>
+                    <!--routes for next page (icebox feature)-->
+                    <a class="nextPage" href="#">Next Page</a>
+                </div>
+                <div class="container-fluid top-posts">
+                    <div class="card post">
+                        <div class="card user" style="width: 18rem;">
+                            <img src="{{this.userPic}}" class="card-img-top" alt="{{this.username}}">
+                            <div class="card-body">
+                                <p class="card-text name">{{this.username}}</p>
+                                <p class="card-text post-count">{{this.post}}</p>
+                                <p class="card-text online-status">{{this.online-status}}</p>
+                            </div>
+                        </div>
+                        <div class="user-post">
+                            <p> {{this.post}}</p>
+                        </div>
+                        <a class="comments" href="#">{{this.comments-count}}</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+            <script src="/js/index.js"></script>
 </body>
 
 </html>
