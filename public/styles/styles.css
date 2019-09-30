@@ -34,28 +34,10 @@
 }
 
 
- /* h1 {
-   color: blue;
-   background-color: black;
-   text-align: center;
-   width: 240px;
-   margin-left: 160px;
- } */
-
  .loginContainer {
    background : transparent;
    color : blue;
   
- }
-
- /* .form-control {
-    width : 40%; 
- } */
-
- #newprofile {
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: rgba(250, 242, 231, 0.829);
  }
 
  #username-text,
@@ -71,6 +53,14 @@
  #zip {
    width : 160px;
  }
+
+
+ #newUser{
+  margin-left: 20px;
+margin-right: 20px;
+}
+#createUserPage{
+  background-color: rgba(250, 242, 231, 0.829);
 
 
 
@@ -266,4 +256,5 @@ body {
   right: 4%;
   top: 25%;
   color: white;
+
 }
