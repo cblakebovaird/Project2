@@ -1,10 +1,11 @@
 var db = require("../models/newUser");
+// var Post = require("../models/testPost.js");
 
 module.exports = function(app) {
   // Get all users
   app.get("/api/users", function(req, res) {
-    db.Users.findAll({}).then(function(dbUsers) {
-      res.json(dbUsers);
+    newUser.findAll({}).then(function(results) {
+      res.json(results);
     });
   });
 
@@ -13,7 +14,11 @@ module.exports = function(app) {
     console.log("New User Data:");
     console.log(req.body);
 
-    var dbQuery = "INSERT INTO "
+    newUser.create({
+
+    }).then(function(results) {
+      res.end();
+    });
 
     db.newUser.create(newUser).then(function(dbNewUser) {
       res.json(dbNewUser);
@@ -24,6 +29,32 @@ module.exports = function(app) {
   app.delete("/api/Users/:id", function(req, res) {
     db.User.destroy({ where: { id: req.params.id } }).then(function(dbUser) {
       res.json(dbUser);
+    });
+  });
+
+  //-------------Posting routes-------------------
+
+  // Get all Posts
+  app.get("/api/all", function(req, res) {
+    // finds all post then returns them as JSON
+    db.Post.findAll({}).then(function(results) {
+      // results are available to us inside the .then
+      res.json(results);
+    });
+  });
+
+  // Add a post
+  app.post("/api/new", function(req, res) {
+    console.log("Post Data:");
+    console.log(req.body);
+
+    db.Post.create({
+      title: req.body.title,
+      body: req.body.body,
+      createdAt: req.body.createdAt
+    }).then(function() {
+      // `results` here would be the newly created post
+      res.end();
     });
   });
 };

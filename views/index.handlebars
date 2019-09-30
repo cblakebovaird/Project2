@@ -2,46 +2,69 @@
 
   <div class="container" id="indexJumbotron">
     <h1 class="display-4">Tinder for Coders </h1>
-      <p class="lead">Good, short description of the website, placeholder for now</p><br><br>
-      <a class="btn btn-primary btn-lg" href="#" role="button" id="createProfile">Create Account</a>
-      <a class="btn btn-primary btn-lg" href="#" role="button" id="loginBtn">Log in</a>
 
-  <div class="container">
-    <div class="row">
-      <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-  
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>Login Credintials</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Username</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+    <p class="lead">Good, short description of the website, placeholder for now</p><br><br>
+    <a class="btn btn-primary btn-lg" href="#" role="button">Create Account</a>
+    <button class="btn btn-primary btn-lg" role="button" id="loginBtn" data-toggle="modal" data-target="#indexModal">Log
+      in</button>
+  </div>
+
+  <div class="modal fade" id="indexModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{msg}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="loginContainer">
+
+            <div class="container">
+
+              <div class="col-8 offset-2">
+                <h2>Login Credentials</h2>
+                <form class="clearfix mb-4" action="POST">
+                  <div class="form-group">
+                    <label for="example-text">Username</label>
+                    <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+                      placeholder="Enter Example Text">
+                  </div>
+                  <div class="form-group">
+                    <label for="example-description">Password</label>
+                    <textarea class="form-control" id="example-description" aria-describedby="example-description"
+                      placeholder="Enter Example Description"></textarea>
+                  </div>
+                  <button id="submit" class="btn btn-primary float-right">Submit</button>
+                </form>
+                <h3>Examples:</h3>
+                <ul id="example-list" class="list-group">
+                  {{#each examples}}
+                  <li data-id="{{this.id}}" class="list-group-item">
+                    <a href="example/{{this.id}}">{{this.text}}</a>
+                    <button class="btn btn-danger float-right delete">ｘ</button>
+                  </li>
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+
+
+
           </div>
-          <div class="form-group">
-            <label for="example-description">Password</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Log In</button>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        </div>
       </div>
     </div>
-    </div>
-</div>
 
   </div>
-</div>
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="../routes/htmlRoutes.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/index.js"></script>
+

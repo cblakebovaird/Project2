@@ -13,41 +13,31 @@
 
 #indexJumbotron {
   text-align: center;
-  margin-top: 9.5%;
+  padding-top: 9.5%;
   background-color: none;
   opacity: 1;
   color: white;
 }
 
-body {
+#home {
   background-image: url("https://wallpaperplay.com/walls/full/5/a/8/156627.jpg#.XYmzy6eZHPc.link");
+  height: 100vh;
 }
 
- 
+.postDivs {
+  background-color: aqua;
+  width: 40%;
+}
+
+#postAreaDiv {
+  margin: auto;
+}
 
 
- /* h1 {
-   color: blue;
-   background-color: black;
-   text-align: center;
-   width: 240px;
-   margin-left: 160px;
- } */
-
- .jumbotron {
+ .loginContainer {
    background : transparent;
    color : blue;
   
- }
-
- .form-control {
-   /* width : 40%; */
- }
-
- #newprofile {
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: rgba(250, 242, 231, 0.829);
  }
 
  #username-text,
@@ -64,3 +54,10 @@ body {
    width : 160px;
  }
 
+ #newUser{
+  margin-left: 20px;
+margin-right: 20px;
+}
+#createUserPage{
+  background-color: rgba(250, 242, 231, 0.829);
+}

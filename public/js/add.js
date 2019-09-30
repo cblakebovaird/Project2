@@ -1,4 +1,4 @@
-// // when user clicks add-btn
+// when user clicks add-btn
 $("#create-profile").on("click", function(event) {
   console.log("connected");
   event.preventDefault();
@@ -39,12 +39,8 @@ $("#create-profile").on("click", function(event) {
     // experience value
     experience: $("experience").val()
   };
-
-  // console.log(newUser);
-  // send an AJAX POST-request with jQuery
-  $.post("/api/new", newUser)
-  
-  .then(function() {
-  
+  console.log(newUser);
+  $.post("/api/new", newUser).then(function(data) {
+    console.log(data);
   });
 });
