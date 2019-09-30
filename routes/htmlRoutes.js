@@ -4,6 +4,14 @@ var path = require("path");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+<<<<<<< HEAD
+    db.User.findAll({}).then(function(dbUsers) {
+      res.render("index.handlebars", {
+        msg: "Welcome to <       >!",
+        User: dbUsers
+      });
+    });
+=======
     res.render("index");
   });
 
@@ -12,6 +20,7 @@ module.exports = function(app) {
   });
   app.get("/newuser", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/newprofile.html"));
+>>>>>>> master
   });
 
   app.get("/", function(req, res) {
@@ -25,10 +34,13 @@ module.exports = function(app) {
       });
     });
   });
+<<<<<<< HEAD
+=======
   app.get("/postTest", function(req, res) {
     res.render("postTesting");
   });
 
+>>>>>>> master
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
