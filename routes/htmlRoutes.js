@@ -12,12 +12,22 @@ module.exports = function(app) {
     });
     res.render("index");
   });
-
+  // this code here is just for testing
   app.get("/landing", function(req, res) {
-    res.render("landing");
+    res.sendFile(path.join(__dirname, "../test/landingtest.html"));
   });
+
+  // This is commented out until testing is finished
+  // app.get("/landing", function(req, res) {
+  //   res.render("landing");
+  // });
+  // html page for testing create user
   app.get("/newuser", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/newprofile.html"));
+  });
+  // handlebars page for create user
+  app.get("/user", function(req, res) {
+    res.render("user");
   });
 
   app.get("/", function(req, res) {
