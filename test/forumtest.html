@@ -153,11 +153,40 @@
             left: 50%;
         }
 
+        .upVote {
+            position: absolute;
+            bottom: 0;
+            right: 13%;
+        }
+        .upVote:hover{
+            background-color: black;
+        }
+        .upVoteCounter{
+            position: absolute;
+            bottom: 0;
+            right: 12%;
+        }
+
+        .downVote {
+            position: absolute;
+            bottom: 0;
+            right: 4%;
+        }
+        .downVote:hover{
+            background-color: black;
+        }
+        .downVoteCounter{
+            position: absolute;
+            bottom: 0;
+            right: 3%;
+        }
+
         .previousPage,
         .previousPage:hover {
             float: left;
             position: absolute;
-            left: 0;
+            left: 4%;
+            top: 25%;
             color: white;
         }
 
@@ -165,7 +194,8 @@
         .nextPage:hover {
             float: right;
             position: absolute;
-            right: 0;
+            right: 4%;
+            top: 25%;
             color: white;
         }
     </style>
@@ -443,6 +473,12 @@
                         blandit enim porttitor eu.</p>
                 </div>
                 <a class="comments" href="#"> 5 comments </a>
+                <input type="image" style="width:4rem;" src="C:\Users\Jarro\UCFBootcamp\Homework\project2\public\images\ThumbsUp.png" class="btn upVote" data-toggle="button" aria-pressed="false"
+                autocomplete="off" />
+                <p class="upVoteCounter">1</p>
+                <input type="image" style="width:4rem;" src="C:\Users\Jarro\UCFBootcamp\Homework\project2\public\images\ThumbsDown.png" class="btn downVote" data-toggle="button" aria-pressed="false"
+                autocomplete="off" />
+                <p class="downVoteCounter">1</p>
             </div>
         </div>
     </div>
