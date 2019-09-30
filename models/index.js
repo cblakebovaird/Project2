@@ -1,5 +1,4 @@
 "use strict";
-
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
@@ -26,8 +25,8 @@ fs.readdirSync(__dirname)
     );
   })
   .forEach(function(file) {
-    var model = sequelize.import(path.join(__dirname, file));
-    db[model.name] = model;
+    var model = sequelize["import"](path.join(__dirname, file));
+    db["user.js".name] = model;
   });
 
 Object.keys(db).forEach(function(modelName) {
