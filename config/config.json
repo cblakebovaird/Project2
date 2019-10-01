@@ -2,8 +2,8 @@
   "development": {
     "username": "root",
 
-    "password": "",
-    "database": "",
+    "password": "Hearthstone5174",
+    "database": "test_db",
 
 
     "host": "localhost",
