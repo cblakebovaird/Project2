@@ -251,41 +251,49 @@
             <a class="nextPage" href="#">Next Page</a>
         </div>
         <div class="container-fluid top-posts">
-            <div class="card post">
-                <div class="card user" style="width: 18rem;">
-                    <img src="C:\Users\Jarro\UCFBootcamp\Homework\project2\public\images\logoCropped.png"
-                        class="card-img-top" alt="img">
-                    <div class="card-body">
-                        <p class="card-text name">UserName</p>
-                        <p class="card-text post-count">12 Posts</p>
-                        <p class="card-text online-status">Online</p>
+            <div id="postSection">
+                <button id="modalTest" class="btn btn-lg pull-right" data-toggle="modal" data-target="#testModal">Test Button for
+                    the modal</button>
+                <div class="modal" tabindex="-1" role="dialog" id="testModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Post Modal</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <p class="cool-font">Title</p>
+                                            <input class="form-control" type="text" id="title" placeholder="Enter title">
+                                            <br>
+                                            <p class="cool-font">Post</p>
+                                            <textarea class="form-control" rows="3" id="postBox"
+                                                placeholder="Enter Post Here!"></textarea><br>
+                                        </div>
+                                    </div><br>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" id="postSubmit">Submit</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="user-post">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non elit iaculis, hendrerit ex
-                        vitae, dignissim erat.
-                        Cras maximus fringilla elementum. Pellentesque et tellus magna. Nam consequat sem neque, at
-                        blandit enim porttitor eu.</p>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h2>Posts</h2>
+                        <hr>
+                        <div id="postArea"></div>
+                    </div>
                 </div>
-                <a class="comments" href="#"> 5 comments </a>
-            </div>
+             </div>
         </div>
     </div>
-
-
-
-
-
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
-            <script src="/js/index.js"></script>
-</body>
-
-</html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/posts.js"></script>

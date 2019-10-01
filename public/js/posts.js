@@ -37,7 +37,7 @@ $("#postSubmit").on("click", function(event) {
   $("#title").val("");
   $("#postBox").val("");
 });
-
+console.log("getting all");
 // When the page loads, grab all of our posts
 $.get("/api/all", function(data) {
   if (data.length !== 0) {

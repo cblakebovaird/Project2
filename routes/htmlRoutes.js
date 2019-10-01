@@ -7,15 +7,16 @@ module.exports = function(app) {
     res.render("index");
   });
   // this code here is just for testing
-  // app.get("/landing", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../test/landingtest.html"));
-  // });
 
-  // This is commented out until testing is finished
   app.get("/landing", function(req, res) {
     res.render("landing");
   });
 
+  // This is commented out until testing is finished
+
+  // app.get("/landing", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../test/landingtest.html"));
+  // });
   // handlebars page for create user
   app.get("/newuser", function(req, res) {
     res.render("user");
@@ -32,12 +33,15 @@ module.exports = function(app) {
       });
     });
   });
+
+  //testing handlebars for posting until it is finished
+
   app.get("/postTest", function(req, res) {
     res.render("postTesting");
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+  // app.get("*", function(req, res) {
+  //   res.render("404");
+  // });
 };

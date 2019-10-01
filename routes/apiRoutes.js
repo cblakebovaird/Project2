@@ -1,5 +1,4 @@
 var db = require("../models");
-// var Post = require("../models/testPost.js");
 
 module.exports = function(app) {
   // Get all users
@@ -15,13 +14,7 @@ module.exports = function(app) {
         //we can store our hashedPassword into our database
         //var hashedPassword = await bcrypt.hash(req.body.password, 10);
 
-        //this is to push our information into an array
-        // users.push ({
-        //     id: Date.now().toString(),
-        //     name: req.body.name,
-        //     email: req.body.email,
-        //     password: hashedPassword
-        // })
+
         db.newUser.create({
             username: req.body.username,
             password: req.body.password
@@ -42,6 +35,7 @@ module.exports = function(app) {
 
   // Get all Posts
   app.get("/api/all", function(req, res) {
+    console.log("hi");
     // finds all post then returns them as JSON
     db.Post.findAll({}).then(function(results) {
       // results are available to us inside the .then

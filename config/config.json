@@ -1,8 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "cancer9463",
-    "database": "userdb",
+
+    "password": "",
+    "database": "",
+
+
     "host": "localhost",
     "dialect": "mysql"
   },

@@ -24,6 +24,10 @@
   height: 100vh;
 }
 
+#postArea {
+  margin-left: 0;
+}
+
 .postDivs {
   background-color: aqua;
   width: 40%;
@@ -142,14 +146,11 @@ body {
 .post {
   background-color: black;
   color: white;
-  margin: 0 auto;
   border-style: solid;
   border-color: lightblue;
   border-width: 1px;
-  width: 65%;
+  width: 100%;
   padding: 5px;
-  display: flex;
-  flex-direction: row;
 }
 
 .top-posts {
@@ -257,4 +258,12 @@ body {
   top: 25%;
   color: white;
 
+}
+
+.jumbotron-fluid {
+  background-image: url(https://d2slcw3kip6qmk.cloudfront.net/marketing/techblog/how-to-plan-a-programming-competition-header@2x.png);
+}
+
+h2 {
+  color: white;
 }
