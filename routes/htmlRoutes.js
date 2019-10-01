@@ -6,12 +6,19 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.render("index");
   });
+  // this code here is just for testing
+  // app.get("/landing", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../test/landingtest.html"));
+  // });
 
+  // This is commented out until testing is finished
   app.get("/landing", function(req, res) {
     res.render("landing");
   });
+
+  // handlebars page for create user
   app.get("/newuser", function(req, res) {
-    res.sendFile(path.join(__dirname, "../test/newprofile.html"));
+    res.render("user");
   });
 
   app.get("/", function(req, res) {

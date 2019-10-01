@@ -1,5 +1,3 @@
-// Makes the New User Model available for other files (will also create a table)
-
 module.exports = function(sequelize, DataTypes) {
   var newUser = sequelize.define("newUser", {
     username: DataTypes.STRING,
