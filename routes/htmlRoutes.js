@@ -4,32 +4,20 @@ var path = require("path");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-<<<<<<< HEAD
-    db.User.findAll({}).then(function(dbUsers) {
-      res.render("index.handlebars", {
-        msg: "Welcome to <       >!",
-        User: dbUsers
-      });
-    });
-=======
     res.render("index");
   });
   // this code here is just for testing
-  app.get("/landing", function(req, res) {
-    res.sendFile(path.join(__dirname, "../test/landingtest.html"));
-  });
+  // app.get("/landing", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../test/landingtest.html"));
+  // });
 
   // This is commented out until testing is finished
-  // app.get("/landing", function(req, res) {
-  //   res.render("landing");
-  // });
-  // html page for testing create user
-  app.get("/newuser", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/newprofile.html"));
->>>>>>> master
+  app.get("/landing", function(req, res) {
+    res.render("landing");
   });
+
   // handlebars page for create user
-  app.get("/user", function(req, res) {
+  app.get("/newuser", function(req, res) {
     res.render("user");
   });
 
@@ -44,13 +32,10 @@ module.exports = function(app) {
       });
     });
   });
-<<<<<<< HEAD
-=======
   app.get("/postTest", function(req, res) {
     res.render("postTesting");
   });
 
->>>>>>> master
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

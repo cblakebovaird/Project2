@@ -1,3 +1,7 @@
+var express = require("express");
+var exphbs = require("express-handlebars");
+var app = express();
+
 // when user clicks add-btn
 $("#create-profile").on("click", function(event) {
   console.log("connected");
@@ -8,7 +12,7 @@ $("#create-profile").on("click", function(event) {
     // name from name input
     username: $("#username-text").val(),
     // password from password input
-    password: $("#password").val(),
+    password: $("#password-text").val(),
     firstName: $("#firstName").val(),
     // age from age input
     age: $("#age").val(),
@@ -40,7 +44,9 @@ $("#create-profile").on("click", function(event) {
     experience: $("experience").val()
   };
   console.log(newUser);
-  $.post("/api/new", newUser).then(function(data) {
-    console.log(data);
+  $.post("/api/newuser", newUser, function() {
+    console.log(newUser);
   });
+
+
 });

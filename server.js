@@ -12,6 +12,7 @@ var methodOverride = require("method-override");
 var bcrypt = require("bcrypt");
 //===================================================== install them all - SM
 
+
 var db = require("./models");
 
 var app = express();
@@ -51,7 +52,8 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-//require("./routes/htmlRoutes")(app);
+require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
 require("./routes/userauthRoutes")(app);
 
 var syncOptions = { force: false };

@@ -17,8 +17,8 @@ app.post("/login", checkNotAuthenticated, passport.authenticate("local", {
     failureFlash: true
 }))
 
-app.get("/register", checkNotAuthenticated, (req, res) => {
-    res.render("register.js");
+app.get("/newuser", checkNotAuthenticated, (req, res) => {
+    res.render("user");
 })
 
 app.post("/register", checkNotAuthenticated, async (req, res) => {
