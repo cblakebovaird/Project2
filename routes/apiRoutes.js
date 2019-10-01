@@ -1,5 +1,4 @@
 var db = require("../models");
-
 module.exports = function(app) {
   // Get all users
   app.get("/api/users", function(req, res) {
@@ -20,9 +19,8 @@ module.exports = function(app) {
             password: req.body.password
         }).then(function (dbUser) {
           console.log(dbUser);
-            res.render("index");
-        })
-})
+        });
+});
 
   // Delete an User by id
   app.delete("/api/Users/:id", function(req, res) {
