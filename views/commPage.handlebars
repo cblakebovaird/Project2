@@ -244,64 +244,18 @@
         <h1>Top Trending Posts</h1>
         <a class="nextPage" href="#">Next Page</a>
     </div>
-    <div class="container-fluid top-posts">
-        <div id="postSection">
-            <button id="modalTest" class="btn btn-lg pull-right" data-toggle="modal" data-target="#testModal">Test
-                Button for
-                the modal</button>
-            <div class="modal" tabindex="-1" role="dialog" id="testModal">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Post Modal</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-8 col-sm-offset-2">
-                                        <p class="cool-font">Title</p>
-                                        <input class="form-control" type="text" id="title" placeholder="Enter title">
-                                        <br>
-                                        <p class="cool-font">Post</p>
-                                        <textarea class="form-control" rows="3" id="postBox"
-                                            placeholder="Enter Post Here!"></textarea><br>
-                                        {{!-- <div class="form-group">
-                                            <label for="category">Select Category:</label>
-                                            <select class="custom-select" id="category">
-                                                <option value="HTML">HTML</option>
-                                                <option value="CSS">CSS</option>
-                                                <option value="Javascript">Javascript</option>
-                                                <option value="MYSQL">MSQL</option>
-                                                <option value="Python">Python</option>
-                                                <option value="RUBY">RUBY</option>
-                                                <option value="Java">Java</option>
-                                                <option value="C++">C++</option>
-                                                <option value="C#">C#</option>
-                                            </select>
-                                        </div> --}}
-                                    </div>
-                                </div><br>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" id="postSubmit">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <hr>
-                    <div id="postArea"></div>
-                </div>
-            </div>
-        </div>
+    <br>
+    <div id="post">
+        <h2 class="postCol">{{title}}</h2>
+        <hr>
+        <p class="postCol">{{body}}</p>
     </div>
 </div>
+
+<script type="text/javascript">
+    console.log($("#post"))
+</script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-<script src="/js/posts.js"></script>
+{{!-- <script src="/js/index.js"></script> --}}
+{{!-- <script src="/js/comPage.js"></script> --}}

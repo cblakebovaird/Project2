@@ -11,6 +11,10 @@
   margin-left: 10px;
 }
 
+.postCol {
+  color: white;
+}
+
 #indexJumbotron {
   text-align: center;
   padding-top: 9.5%;

@@ -49,12 +49,27 @@ module.exports = function(app) {
     db.Post.create({
       title: req.body.title,
       body: req.body.body,
+      // category: req.body.category,
       createdAt: req.body.createdAt
     }).then(function() {
       // `results` here would be the newly created post
       res.end();
     });
   });
+
+  // Get route for retrieving a single post
+  app.get("/api/posts/:id", function(req, res) {
+    db.Post.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+
   //this is a function that only allows users who are logged in to view the information in the webpage
 function checkAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
