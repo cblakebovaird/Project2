@@ -1,5 +1,4 @@
 var db = require("../models");
-// var db2 = require("../models/testPost.js");
 
 module.exports = function(app) {
   // Get all users
@@ -10,18 +9,20 @@ module.exports = function(app) {
   });
 
   // Create a new user
-  app.post("/api/newuser", function(req, res) {
-    console.log("New User Data:");
+  app.post("/api/newuser", checkNotAuthenticated, function (req, res) {
     console.log(req.body);
+        //we can store our hashedPassword into our database
+        //var hashedPassword = await bcrypt.hash(req.body.password, 10);
 
-    newUser.create({}).then(function() {
-      res.end();
-    });
 
-    db.newUser.create(newUser).then(function(dbNewUser) {
-      res.json(dbNewUser);
-    });
-  });
+        db.newUser.create({
+            username: req.body.username,
+            password: req.body.password
+        }).then(function (dbUser) {
+          console.log(dbUser);
+            res.render("index");
+        })
+})
 
   // Delete an User by id
   app.delete("/api/Users/:id", function(req, res) {
@@ -56,4 +57,20 @@ module.exports = function(app) {
       res.end();
     });
   });
+  //this is a function that only allows users who are logged in to view the information in the webpage
+function checkAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+      return next()
+  }
+
+  res.redirect("/login");
+}
+
+//this check function wont let users who are already logged in to be redirected to the login page
+function checkNotAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+      return res.redirect("/");
+  }
+  next();
+}
 };
