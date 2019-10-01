@@ -12,19 +12,12 @@ module.exports = function (app) {
     res.render("landing");
   });
 
-  // This is commented out until testing is finished
-
-  // app.get("/landing", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../test/landingtest.html"));
-  // });
+  
   // handlebars page for create user
   app.get("/newuser", function (req, res) {
     res.render("user");
   });
 
-  app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
   // Load User page and pass in an User by id
   app.get("/User/:id", function (req, res) {
     db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
@@ -40,6 +33,7 @@ module.exports = function (app) {
     res.render("postTesting");
   });
 
+
   app.get("/posts/:id", function (req, res) {
     db.Post.findOne({ where: { id: req.params.id } }).then(function (data) {
       console.log(data.title + "   " + data.body);
@@ -52,6 +46,7 @@ module.exports = function (app) {
       res.render("langPage", data);
     })
   })
+
   // Render 404 page for any unmatched routes
   // app.get("*", function(req, res) {
   //   res.render("404");

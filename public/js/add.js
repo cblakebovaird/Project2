@@ -1,6 +1,5 @@
-var express = require("express");
-var exphbs = require("express-handlebars");
-var app = express();
+// var express = require("express");
+// var app = express();
 
 // when user clicks add-btn
 $("#create-profile").on("click", function(event) {
@@ -43,10 +42,10 @@ $("#create-profile").on("click", function(event) {
     // experience value
     experience: $("experience").val()
   };
-  console.log(newUser);
   $.post("/api/newuser", newUser, function() {
     console.log(newUser);
-  });
-
+  }).then(
+    window.location.href = "/"
+  )
 
 });
