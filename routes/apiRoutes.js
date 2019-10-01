@@ -1,5 +1,5 @@
-var db = require("../models/newUser");
-// var Post = require("../models/testPost.js");
+var db = require("../models");
+// var db2 = require("../models/testPost.js");
 
 module.exports = function(app) {
   // Get all users
@@ -14,9 +14,7 @@ module.exports = function(app) {
     console.log("New User Data:");
     console.log(req.body);
 
-    newUser.create({
-
-    }).then(function(results) {
+    newUser.create({}).then(function() {
       res.end();
     });
 
@@ -36,6 +34,7 @@ module.exports = function(app) {
 
   // Get all Posts
   app.get("/api/all", function(req, res) {
+    console.log("hi");
     // finds all post then returns them as JSON
     db.Post.findAll({}).then(function(results) {
       // results are available to us inside the .then
