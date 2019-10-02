@@ -5,6 +5,7 @@
 $("#create-profile").on("click", function(event) {
   console.log("connected");
   event.preventDefault();
+  var htmlValue = $("input[name='html']:checked").val();
 
   // make a newUser obj
   var newUser = {
@@ -12,17 +13,20 @@ $("#create-profile").on("click", function(event) {
     username: $("#username-text").val(),
     // password from password input
     password: $("#password-text").val(),
+    // firstname from firstname input
     firstName: $("#firstName").val(),
+    // lastname from lastname input
+    lastName: $("#lastName").val(),
     // age from age input
     age: $("#age").val(),
     // city from city input
-    city: $("city").val(),
+    city: $("#city").val(),
     // state from state input
     state: $("#state").val(),
     // zip from zip input
     zip: $("#zip").val(),
     // html value
-    html: $("input[name='html']:checked").val(),
+    html: htmlValue,
     // css value
     css: $("input[name='css']:checked").val(),
     // node value
