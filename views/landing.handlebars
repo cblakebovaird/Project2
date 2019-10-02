@@ -4,12 +4,12 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand homeBtn" href="#">Scrypting</a>
+        <a class="navbar-brand homeBtn" href="/landing" role="button">Scrypt</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link homeBtn" href="#">Home</a>
+                    <a class="nav-link homeBtn" href="/landing" role="button">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Account</a>
@@ -246,9 +246,7 @@
     </div>
     <div class="container-fluid top-posts">
         <div id="postSection">
-            <button id="modalTest" class="btn btn-lg pull-right" data-toggle="modal" data-target="#testModal">Test
-                Button for
-                the modal</button>
+            <button id="modalTest" class="btn btn-lg pull-right" data-toggle="modal" data-target="#testModal">Create a Post</button>
             <div class="modal" tabindex="-1" role="dialog" id="testModal">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -268,7 +266,7 @@
                                         <p class="cool-font">Post</p>
                                         <textarea class="form-control" rows="3" id="postBox"
                                             placeholder="Enter Post Here!"></textarea><br>
-                                        {{!-- <div class="form-group">
+                                        <div class="form-group">
                                             <label for="category">Select Category:</label>
                                             <select class="custom-select" id="category">
                                                 <option value="HTML">HTML</option>
@@ -281,7 +279,7 @@
                                                 <option value="C++">C++</option>
                                                 <option value="C#">C#</option>
                                             </select>
-                                        </div> --}}
+                                        </div>
                                     </div>
                                 </div><br>
                             </div>

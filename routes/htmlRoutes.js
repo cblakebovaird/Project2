@@ -6,8 +6,7 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.render("index");
   });
-  // this code here is just for testing
-
+  
   app.get("/landing", function (req, res) {
     res.render("landing");
   });
@@ -41,9 +40,9 @@ module.exports = function (app) {
     });
   })
 
-  app.get("/lang/:name", function (req, res) {
-    db.Post.findAll({where: {category: req.params.name}}),then(function (data) {
-      res.render("langPage", data);
+  app.get("/lang/:category", function (req, res) {
+    db.Post.findAll({ where: { category: req.params.category } }).then(function (data) {
+      res.render("langPage", data.dataValues);
     })
   })
 
