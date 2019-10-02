@@ -296,7 +296,18 @@
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2">
                     <hr>
-                    <div id="postArea"></div>
+                    <div id="postArea">
+                        {{#each post}}
+                            <div class='postDivs post'>
+                                <h4>{{this.dataValues.title}}</h4><hr>
+                                <p>{{this.dataValues.body}}</p><br>
+                                <p>Category: {{this.dataValues.category}}</p>
+                                <p>At {{this.dataValues.createdAt}}</p>
+                                <button class='comBtn' id={{this.dataValues.id}} href="/posts/" + {{this.dataValues.id}}>Edit Post</button>
+                                <button class='comBtn' id={{this.dataValues.id}} href='/posts/' + {{this.dataValues.id}}>View and Comment</button>
+                            </div>
+                        {{/each}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,4 +317,4 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
-<script src="/js/posts.js"></script>
+<script src="/js/postsLang.js"></script>
