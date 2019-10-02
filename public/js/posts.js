@@ -53,13 +53,13 @@ $.get("/api/all", function(data) {
       row.addClass("post");
 
 
-      row.append("<p>Title: " + data[i].title + "<hr>");
-      row.append("<p>Body: " + data[i].body + "</p>");
-
+      row.append("<h4>" + data[i].title + "</h4><hr>");
+      row.append("<p>" + data[i].body + "</p><br>");
+      row.append("<p>Category: " + data[i].category + "</p>");
       row.append(
         "<p>At " + moment(data[i].createdAt).format("h:mma on dddd") + "</p><button class='comBtn' id='" + data[i].id + "' href='/posts/" + data[i].id + "'>Edit Post</button>" + "</p><button class='comBtn' id='" + data[i].id + "' href='/posts/" + data[i].id + "'>View and Comment</button>"
       );
-      console.log(data[i]);
+      console.log(data[i].category);
       $("#postArea").prepend(row);
     }
   }
