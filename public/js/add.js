@@ -49,7 +49,7 @@ $("#create-profile").on("click", function(event) {
   $.post("/api/newuser", newUser, function() {
     console.log(newUser);
   }).then(
-    window.location.href = "/"
+    window.location.href = "/landing"
   )
 
 });
