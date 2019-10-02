@@ -50,10 +50,10 @@ $.get("/api/all", function(data) {
       var row = $("<div class='postDivs'>");
       row.addClass("post");
 
-      row.append("<p>" + data[i].title + "<hr>");
-      row.append("<p>" + data[i].body + "</p>");
+      row.append("<p>Title: " + data[i].title + "<hr>");
+      row.append("<p>Body: " + data[i].body + "</p>");
       row.append(
-        "<p>At " + moment(data[i].createdAt).format("h:mma on dddd") + "</p><button class='comBtn' id='" + data[i].id + "' href='/posts/" + data[i].id + "'>View and Create Comments</button>"
+        "<p>At " + moment(data[i].createdAt).format("h:mma on dddd") + "</p><button class='comBtn' id='" + data[i].id + "' href='/posts/" + data[i].id + "'>Edit Post</button>" + "</p><button class='comBtn' id='" + data[i].id + "' href='/posts/" + data[i].id + "'>View and Comment</button>"
       );
 
       $("#postArea").prepend(row);

@@ -2,8 +2,8 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all users
   app.get("/api/users", function(req, res) {
-    newUser.findAll({}).then(function(results) {
-      res.json(results);
+    db.newUser.findAll({}).then(function(results) {
+      res.JSON(results);
     });
   });
 
@@ -16,7 +16,26 @@ module.exports = function(app) {
 
         db.newUser.create({
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password, 
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            age: req.body.age,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip,
+            html: req.body.html,
+            css: req.body.css,
+            node: req.body.node,
+            python: req.body.python,
+            react: req.body.react,
+            javascript: req.body.javascript,
+            sql: req.body.sql,
+            php: req.body.php,
+            ruby: req.body.ruby,
+            java: req.body.java,
+            c: req.body.c,
+            cplus: req.body.cplus,
+            experience: req.body.experience
         }).then(function (dbUser) {
           console.log(dbUser);
         });

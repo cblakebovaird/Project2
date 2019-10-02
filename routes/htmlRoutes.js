@@ -36,8 +36,8 @@ module.exports = function (app) {
 
   app.get("/posts/:id", function (req, res) {
     db.Post.findOne({ where: { id: req.params.id } }).then(function (data) {
-      console.log(data.title + "   " + data.body);
-      res.render("commPage", data);
+      console.log(data.dataValues);
+      res.render("commPage", data.dataValues);
     });
   })
 
