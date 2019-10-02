@@ -41,8 +41,12 @@ module.exports = function (app) {
   })
 
   app.get("/lang/:category", function (req, res) {
+    console.log("this is the log: " + req.params.category);
     db.Post.findAll({ where: { category: req.params.category } }).then(function (data) {
-      res.render("langPage", data.dataValues);
+        console.log(data);
+        
+      res.render("langPage", {post: data});
+      
     })
   })
 

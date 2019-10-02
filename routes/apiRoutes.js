@@ -88,6 +88,17 @@ module.exports = function(app) {
       });
   });
 
+  // Get route for retrieving all posts of a certain category
+  app.get("/api/lang/:category", function(req, res) {
+    db.Post.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(function(data){
+      res.json(data);
+    })
+  })
+
 
   //this is a function that only allows users who are logged in to view the information in the webpage
 function checkAuthenticated(req, res, next) {
