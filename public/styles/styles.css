@@ -49,6 +49,9 @@
   margin: auto;
 }
 
+#modelTest {
+  color: black;
+}
 
  .loginContainer {
    background : transparent;
@@ -137,7 +140,7 @@ margin-right: 20px;
 .card {
   padding: 0;
   text-align: center;
-  background-color: lightgrey;
+  background-color: black;
   margin-bottom: 5px;
   color: white;
   border-style: solid;
@@ -195,7 +198,7 @@ body {
 }
 
 .nav-link {
-  color: skyblue;
+  color: white;
 }
 
 .nav-link:hover {
@@ -281,9 +284,10 @@ body {
 }
 
 h2 {
-  color: white;
+  color: blue;
 }
 
+/* below code is for 'pusher' */
 /* /* .flash-comments .user-icon{
   flex: 0 80px;
   display: flex;
