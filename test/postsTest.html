@@ -1,88 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Chirpy!</title>
+  <title>Pusher Test</title>
+  <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+  <script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    var pusher = new Pusher('749511e926c609eb9ef3', {
+      cluster: 'us2',
+      forceTLS: true
+    });
 
-    <!-- Moment.js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(JSON.stringify(data));
+    });
+  </script>
 </head>
-
 <body>
-
-    <div class="jumbotron">
-        <h1 class="text-center">Tinder for Coders</h1>
-    </div>
-
-    <button id="modalTest" class="btn btn-lg pull-right" data-toggle="modal" data-target="#testModal">Test Button for
-        the modal</button>
-
-    <div class="modal" tabindex="-1" role="dialog" id="testModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Post Modal</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-sm-8 col-sm-offset-2">
-                                <p class="cool-font">Title</p>
-                                <input class="form-control" type="text" id="title" placeholder="Enter title">
-                                <br>
-                                <p class="cool-font">Post</p>
-                                <textarea class="form-control" rows="3" id="postBox"
-                                    placeholder="Enter Post Here!"></textarea><br>
-                            </div>
-                        </div><br>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="postSubmit">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-            <h2>Posts</h2>
-            <hr>
-            <div id="postArea"></div>
-        </div>
-    </div>
-
-
-    <script type="text/javascript" src="../public/js/posts.js"></script>
+  <h1>Pusher Test</h1>
+  <p>
+    Try publishing an event to channel <code>my-channel</code>
+    with event name <code>my-event</code>.
+  </p>
 </body>
-
 </html>

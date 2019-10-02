@@ -68,7 +68,7 @@ module.exports = function(app) {
     db.Post.create({
       title: req.body.title,
       body: req.body.body,
-      // category: req.body.category,
+      category: req.body.category,
       createdAt: req.body.createdAt
     }).then(function() {
       // `results` here would be the newly created post
