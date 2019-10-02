@@ -2,11 +2,8 @@
   "development": {
     "username": "root",
 
-
-
-    "password": "cancer9463",
-    "database": "Userdb",
-
+    "password": "Hearthstone5174",
+    "database": "test_db",
 
     "host": "localhost",
     "dialect": "mysql"

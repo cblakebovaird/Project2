@@ -68,3 +68,7 @@ function commentBtn() {
       console.log("id: " + currentPost.id);
     window.location.href = "/posts/" + currentPost.id + "";
 }
+
+$(".homeBtn").on("click", function() {
+  window.location.href = "/landing";
+})
