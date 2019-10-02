@@ -2,8 +2,10 @@
   "development": {
     "username": "root",
 
-    "password": "1234",
-    "database": "test_db",
+
+    "password": "cancer9463",
+    "database": "Userdb",
+
 
     "host": "localhost",
     "dialect": "mysql"

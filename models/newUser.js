@@ -8,19 +8,21 @@ module.exports = function(sequelize, DataTypes) {
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zip: DataTypes.INTEGER,
-    html: DataTypes.BOOLEAN,
-    css: DataTypes.BOOLEAN,
-    node: DataTypes.BOOLEAN,
-    python: DataTypes.BOOLEAN,
-    react: DataTypes.BOOLEAN,
-    javascript: DataTypes.BOOLEAN,
-    sql: DataTypes.BOOLEAN,
-    php: DataTypes.BOOLEAN,
-    ruby: DataTypes.BOOLEAN,
-    java: DataTypes.BOOLEAN,
-    c: DataTypes.BOOLEAN,
-    cplus: DataTypes.BOOLEAN,
+    html: DataTypes.STRING,
+    css: DataTypes.STRING,
+    node: DataTypes.STRING,
+    python: DataTypes.STRING,
+    react: DataTypes.STRING,
+    javascript: DataTypes.STRING,
+    sql: DataTypes.STRING,
+    php: DataTypes.STRING,
+    ruby: DataTypes.STRING,
+    java: DataTypes.STRING,
+    c: DataTypes.STRING,
+    cplus: DataTypes.STRING,
     experience: DataTypes.INTEGER
   });
   return newUser;
+
 };
+

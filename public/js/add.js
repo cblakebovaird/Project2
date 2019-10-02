@@ -5,6 +5,7 @@
 $("#create-profile").on("click", function(event) {
   console.log("connected");
   event.preventDefault();
+  var htmlValue = $("input[name='html']:checked").val();
 
   // make a newUser obj
   var newUser = {
@@ -12,33 +13,36 @@ $("#create-profile").on("click", function(event) {
     username: $("#username-text").val(),
     // password from password input
     password: $("#password-text").val(),
+    // firstname from firstname input
     firstName: $("#firstName").val(),
+    // lastname from lastname input
+    lastName: $("#lastName").val(),
     // age from age input
     age: $("#age").val(),
     // city from city input
-    city: $("city").val(),
+    city: $("#city").val(),
     // state from state input
     state: $("#state").val(),
     // zip from zip input
     zip: $("#zip").val(),
     // html value
-    html: $("#html").val(),
+    html: htmlValue,
     // css value
-    css: $("#css").val(),
+    css: $("input[name='css']:checked").val(),
     // node value
-    node: $("#node").val(),
+    node: $("input[name='node']:checked").val(),
     // python value
-    python: $("#python").val(),
+    python: $("input[name='python']:checked").val(),
     // react value
-    react: $("#react").val(),
+    react: $("input[name='react']:checked").val(),
     // javascript value
-    javascript: $("#javascript").val(),
+    javascript: $("input[name='javascript']:checked").val(),
     // sql value
-    sql: $("#sql").val(),
+    sql: $("input[name='sql']:checked").val(),
     // php value
-    php: $("#php").val(),
+    php: $("input[name='php']:checked").val(),
     // ruby value
-    ruby: $("#ruby").val(),
+    ruby: $("input[name='ruby']:checked").val(),
     // experience value
     experience: $("experience").val()
   };
